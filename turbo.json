@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["RAPPEL_CONSO_API_URL"],
   "pipeline": {
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
