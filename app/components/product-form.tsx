@@ -11,6 +11,7 @@ import { getProductAction } from '@/app/_actions/product';
 import { ProductSchema } from '@/app/_schemas/form';
 import { useToast } from '@/components/ui/use-toast';
 import { Product } from '@/types/product';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 interface ProductFormProps {
   onSubmitCompleted: (data: {
@@ -87,26 +88,29 @@ export function ProductForm({ onSubmitCompleted }: ProductFormProps) {
           )}
         </div>
         <div className="flex items-center gap-x-2">
-          <Button
-            type="button"
-            onClick={() => setShowBarcodeScanner(true)}
-            className="w-full"
+          <Dialog
+            open={showBarcodeScanner}
+            onOpenChange={setShowBarcodeScanner}
           >
-            Scanner
-            <ScanBarcode className="h-4 w-4 ml-1" />
-          </Button>
+            <DialogTrigger asChild>
+              <Button type="button" className="w-full">
+                Scanner
+                <ScanBarcode className="h-4 w-4 ml-1" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="h-full sm:h-auto sm:max-w-2xl">
+              <BarcodeScanner
+                onDecodeResult={handleDecodeResult}
+                className="mt-5"
+              />
+            </DialogContent>
+          </Dialog>
           <SubmitButton ref={submitButtonRef} className="w-full">
             Rechercher
             <Search className="h-4 w-4 ml-1" />
           </SubmitButton>
         </div>
       </form>
-      {showBarcodeScanner && (
-        <BarcodeScanner
-          onDecodeResult={handleDecodeResult}
-          className="mt-3 w-full"
-        />
-      )}
     </>
   );
 }
