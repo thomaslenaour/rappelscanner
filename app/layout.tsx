@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={cn('container mx-auto px-4', inter.className)}>
+      <body className={cn('mx-auto px-4', inter.className)}>
         <header className="flex justify-center mt-10">
           <Logo />
         </header>

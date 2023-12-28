@@ -16,7 +16,7 @@ export function ProductNotFound({ className, ...props }: ProductNotFoundProps) {
     >
       <CheckCircle className="h-16 w-16 text-primary mb-3" />
       <h2 className="text-xl font-medium text-center">
-        Aucun rappel trouvé pour ce code barre
+        Aucun rappel trouvé pour ce produit
       </h2>
       <p className="mt-3 text-slate-600">
         Cela signifie que ce produit ne fait l&apos;objet d&apos;aucun rappel.
