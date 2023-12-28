@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { Logo } from '@/components/logo';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { Footer } from '@/components/footer';
 
 import './globals.css';
 
@@ -27,9 +28,7 @@ export default function RootLayout({
           <Logo />
         </header>
         {children}
-        <footer className="flex items-center justify-center max-w-2xl mx-auto text-xs border-t py-5">
-          <p>&copy; {currentYear} RappelScanner</p>
-        </footer>
+        <Footer />
         <Toaster />
       </body>
     </html>
