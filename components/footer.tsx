@@ -39,23 +39,41 @@ export function Footer() {
           </div>
         )}
       </div>
-      <ul className="flex items-center gap-x-2">
-        {socialNetworks.map((socialNework, i) => (
-          <li key={`footer-social-network-${i}`}>
-            <Link href={socialNework.url} target="_blank">
-              <div className="relative w-5 h-5 hover:opacity-75">
-                <Image
-                  src={socialNework.iconUrl}
-                  alt={`${socialNework.name} icon`}
-                  className="object-contain"
-                  fill
-                  priority
-                />
-              </div>
+      <div className="flex flex-col items-end">
+        <ul className="flex items-center gap-x-3">
+          {socialNetworks.map((socialNework, i) => (
+            <li key={`footer-social-network-${i}`}>
+              <Link href={socialNework.url} target="_blank">
+                <div className="relative w-5 h-5 hover:opacity-75">
+                  <Image
+                    src={socialNework.iconUrl}
+                    alt={`${socialNework.name} icon`}
+                    className="object-contain"
+                    fill
+                    priority
+                  />
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="mt-3 text-right space-y-1">
+          <li>
+            <Link href="/#" className="text-slate-600 hover:text-black">
+              Mentions légales
             </Link>
           </li>
-        ))}
-      </ul>
+          <li>
+            <Link
+              href="https://rappel.conso.gouv.fr"
+              target="_blank"
+              className="text-slate-600 hover:text-black"
+            >
+              RappelConso
+            </Link>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }
