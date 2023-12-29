@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Inter } from 'next/font/google';
 
 import { Logo } from '@/components/logo';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Footer } from '@/components/footer';
+import { SimpleAnalyticsScript } from '@/components/analytics/simple-analytics';
+import { analyticsConfig } from '@/config/analytics';
 
 import './globals.css';
 
@@ -30,6 +33,24 @@ export default function RootLayout({
         {children}
         <Footer />
         <Toaster />
+        {analyticsConfig.enabled && (
+          <>
+            <SimpleAnalyticsScript
+              scriptSrc={analyticsConfig.scriptUrl}
+              hostname={analyticsConfig.hostname}
+            />
+            <noscript>
+              <Image
+                src={`${analyticsConfig.baseUrl}/noscript.gif?hostname=${analyticsConfig.hostname}`}
+                alt="Simple Analytics"
+                width={1}
+                height={1}
+                referrerPolicy="no-referrer-when-downgrade"
+                unoptimized
+              />
+            </noscript>
+          </>
+        )}
       </body>
     </html>
   );

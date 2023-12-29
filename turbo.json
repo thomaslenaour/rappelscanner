@@ -1,6 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["RAPPEL_CONSO_API_URL"],
+  "globalEnv": [
+    "RAPPEL_CONSO_API_URL",
+    "NEXT_PUBLIC_SIMPLE_ANALYTICS_BASE_URL",
+    "NEXT_PUBLIC_SIMPLE_ANALYTICS_SCRIPT_URL",
+    "NEXT_PUBLIC_SIMPLE_ANALYTICS_HOSTNAME"
+  ],
   "pipeline": {
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
