@@ -11,7 +11,12 @@ import { getProductAction } from '@/app/_actions/product';
 import { ProductSchema } from '@/app/_schemas/form';
 import { useToast } from '@/components/ui/use-toast';
 import { Product } from '@/types/product';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 interface ProductFormProps {
   onSubmitCompleted: (data: {
@@ -99,6 +104,7 @@ export function ProductForm({ onSubmitCompleted }: ProductFormProps) {
               </Button>
             </DialogTrigger>
             <DialogContent className="h-full sm:h-auto sm:max-w-2xl">
+              <DialogTitle>Scanner un code barre</DialogTitle>
               <BarcodeScanner
                 onDecodeResult={handleDecodeResult}
                 className="mt-5"
