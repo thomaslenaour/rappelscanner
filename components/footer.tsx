@@ -59,11 +59,6 @@ export function Footer() {
         </ul>
         <ul className="mt-3 text-right space-y-1">
           <li>
-            <Link href="/#" className="text-slate-600 hover:text-black">
-              Mentions légales
-            </Link>
-          </li>
-          <li>
             <Link
               href="https://rappel.conso.gouv.fr"
               target="_blank"
