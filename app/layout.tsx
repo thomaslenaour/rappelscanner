@@ -16,7 +16,11 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const viewport: Viewport = {
-  themeColor: rootThemeColor,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: rootThemeColor },
+    { media: '(prefers-color-scheme: dark)', color: rootThemeColor },
+  ],
+  colorScheme: 'only light',
 };
 export const metadata: Metadata = {
   ...rootMetadata,
