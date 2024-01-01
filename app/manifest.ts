@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-import { appDescription } from '@/config/seo';
+import { appDescription } from '@/config/constants';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
