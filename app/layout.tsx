@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 
@@ -8,13 +8,16 @@ import { cn } from '@/lib/utils';
 import { Footer } from '@/components/footer';
 import { SimpleAnalyticsScript } from '@/components/analytics/simple-analytics';
 import { analyticsConfig } from '@/config/analytics';
-import { rootMetadata } from '@/config/seo';
+import { rootMetadata, rootThemeColor } from '@/config/seo';
 import { appTitle } from '@/config/constants';
 
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const viewport: Viewport = {
+  themeColor: rootThemeColor,
+};
 export const metadata: Metadata = {
   ...rootMetadata,
   title: {

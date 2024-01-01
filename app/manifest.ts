@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 
 import { appDescription } from '@/config/constants';
+import { rootThemeColor } from '@/config/seo';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -10,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',
-    theme_color: '#fff',
+    theme_color: rootThemeColor,
     icons: [
       {
         src: '/icon-192.png',
