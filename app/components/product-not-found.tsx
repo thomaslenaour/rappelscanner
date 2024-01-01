@@ -19,9 +19,10 @@ export function ProductNotFound({ className, ...props }: ProductNotFoundProps) {
         Aucun rappel trouvé pour ce produit
       </h2>
       <p className="mt-3 text-slate-600">
-        Cela signifie que ce produit ne fait l&apos;objet d&apos;aucun rappel.
-        Toutefois, nous vous recommandons de regarder la base de données
-        officielle des rappels de produits{' '}
+        Nos systèmes n&apos;ont trouvé aucun rappel pour ce produit. Cependant,
+        il se peut que les codes GTIN ne soient pas toujours fournis dans les
+        informations de rappel. Nous vous recommandons de consulter la base de
+        données officielle des rappels de produits{' '}
         <Link
           className="underline text-black"
           href="https://rappel.conso.gouv.fr"
