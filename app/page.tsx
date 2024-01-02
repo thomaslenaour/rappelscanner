@@ -1,4 +1,13 @@
-import { ProductSection } from './components/product-section';
+import { RappelConso } from '@/components/rappel-conso';
+import { ProductSection } from '@/app/components/product-section';
+import { generatePageMeta } from '@/config/seo';
+import { appDescription, appTitle } from '@/config/constants';
+
+export const metadata = generatePageMeta({
+  title: `${appTitle} - Vérification de rappels produits par code barre`,
+  description: appDescription,
+  url: '/',
+});
 
 export default function Home() {
   return (
@@ -13,6 +22,7 @@ export default function Home() {
         de vérifier si le produit que vous possédez est rappelé.
       </p>
       <ProductSection className="mt-5" />
+      <RappelConso className="mt-5" />
     </main>
   );
 }
