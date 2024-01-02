@@ -1,3 +1,5 @@
+<img src="logo.png" alt="Logo" width="200" />
+
 # RappelScanner
 
 RappelScanner is an open-source tool that allows scanning the barcode of various products to determine if they are subject to a consumption recall in the French government's recall database at <a href="https://rappel.conso.gouv.fr" target="_blank">rappel.conso.gouv.fr</a>.
@@ -39,7 +41,7 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your feature branch (`git checkout -b feat/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing featyre'`)
+3. Commit your changes (`git commit -m "add some amazing feature"`)
 4. Push to the branch (`git push origin feat/amazing-feature`)
 5. Open a Pull Request
 
