@@ -10,6 +10,7 @@ import { SimpleAnalyticsScript } from '@/components/analytics/simple-analytics';
 import { analyticsConfig } from '@/config/analytics';
 import { rootMetadata, rootThemeColor } from '@/config/seo';
 import { appTitle } from '@/config/constants';
+import { Background } from '@/components/background';
 
 import './globals.css';
 
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={cn('mx-auto px-4', inter.className)}>
+        <Background />
         <header className="flex justify-center mt-10">
           <Logo />
         </header>
@@ -62,6 +64,7 @@ export default function RootLayout({
             </noscript>
           </>
         )}
+        <Background />
       </body>
     </html>
   );
