@@ -64,7 +64,6 @@ export default function RootLayout({
             </noscript>
           </>
         )}
-        <Background />
       </body>
     </html>
   );
