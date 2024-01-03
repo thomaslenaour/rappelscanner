@@ -17,7 +17,7 @@ export function ProductCard({
   return (
     <div
       className={cn(
-        'border rounded-lg p-5 flex flex-col items-center justify-center',
+        'border rounded-lg p-5 flex flex-col items-center justify-center bg-white',
         className,
       )}
       {...props}
