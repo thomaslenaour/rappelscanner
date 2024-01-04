@@ -1,9 +1,8 @@
-import { kv } from '@vercel/kv';
-
 import { RappelConso } from '@/components/rappel-conso';
 import { ProductSection } from '@/app/components/product-section';
 import { generatePageMeta } from '@/config/seo';
 import { appDescription, appTitle } from '@/config/constants';
+import { ScanCounter } from '@/app/components/scan-counter';
 
 export const metadata = generatePageMeta({
   title: `${appTitle} - Vérification de rappels produits par code barre`,
@@ -13,9 +12,7 @@ export const metadata = generatePageMeta({
 
 export const revalidate = 60;
 
-export default async function Home() {
-  const scans = await kv.get<string | null>('scans');
-
+export default function Home() {
   return (
     <main className="max-w-2xl mx-auto my-10 sm:my-16">
       <h1 className="font-bold text-3xl">
@@ -29,7 +26,7 @@ export default async function Home() {
       </p>
       <ProductSection className="mt-5" />
       <RappelConso className="mt-5" />
-      <p>Scans: {scans || 'xxxxxx'}</p>
+      <ScanCounter className="mt-10" />
     </main>
   );
 }
