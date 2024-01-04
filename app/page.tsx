@@ -1,3 +1,5 @@
+import { kv } from '@vercel/kv';
+
 import { RappelConso } from '@/components/rappel-conso';
 import { ProductSection } from '@/app/components/product-section';
 import { generatePageMeta } from '@/config/seo';
@@ -9,7 +11,11 @@ export const metadata = generatePageMeta({
   url: '/',
 });
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const scans = await kv.get<string | null>('scans');
+
   return (
     <main className="max-w-2xl mx-auto my-10 sm:my-16">
       <h1 className="font-bold text-3xl">
@@ -23,6 +29,7 @@ export default function Home() {
       </p>
       <ProductSection className="mt-5" />
       <RappelConso className="mt-5" />
+      <p>Scans: {scans || 'xxxxxx'}</p>
     </main>
   );
 }
