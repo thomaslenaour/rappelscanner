@@ -2,6 +2,7 @@ import { RappelConso } from '@/components/rappel-conso';
 import { ProductSection } from '@/app/components/product-section';
 import { generatePageMeta } from '@/config/seo';
 import { appDescription, appTitle } from '@/config/constants';
+import { ScanCounter } from '@/app/components/scan-counter';
 
 export const metadata = generatePageMeta({
   title: `${appTitle} - Vérification de rappels produits par code barre`,
@@ -23,6 +24,7 @@ export default function Home() {
       </p>
       <ProductSection className="mt-5" />
       <RappelConso className="mt-5" />
+      <ScanCounter className="mt-10" />
     </main>
   );
 }
