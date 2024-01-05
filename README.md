@@ -10,6 +10,7 @@ RappelScanner is an open-source tool that allows scanning the barcode of various
 
 - <a href="https://nodejs.org" target="_blank">Node.js</a>
 - <a href="https://pnpm.io" target="_blank">pnpm</a>
+- <a href="https://docker.com" target="_blank">Docker</a>
 
 ### Installing
 
@@ -17,11 +18,13 @@ RappelScanner is an open-source tool that allows scanning the barcode of various
 git clone https://github.com/thomaslenaour/rappelscanner.git
 cd rappelscanner
 pnpm install
+cp .env.example .env
 ```
 
 ### Running
 
 ```sh
+docker-compose up -d
 pnpm dev
 ```
 
