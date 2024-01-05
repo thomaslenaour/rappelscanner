@@ -5,7 +5,7 @@ import { appDescription, appTitle } from '@/config/constants';
 import { ScanCounter } from '@/app/components/scan-counter';
 
 export const metadata = generatePageMeta({
-  title: `${appTitle} - Vérification de rappels produits par code barre`,
+  title: `${appTitle} - Vérification de rappels produits par code-barres`,
   description: appDescription,
   url: '/',
 });
