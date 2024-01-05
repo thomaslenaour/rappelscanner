@@ -10,8 +10,6 @@ export const metadata = generatePageMeta({
   url: '/',
 });
 
-export const revalidate = 60;
-
 export default function Home() {
   return (
     <main className="max-w-2xl mx-auto my-10 sm:my-16">

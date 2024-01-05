@@ -1,5 +1,6 @@
 'use server';
 
+import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 import { kv } from '@vercel/kv';
 import * as qs from 'qs';
@@ -50,6 +51,8 @@ export async function getProductAction(
   const lastProduct = json?.records?.[0]?.record;
 
   await kv.incr('scans');
+
+  revalidatePath('/');
 
   return {
     success: true,
