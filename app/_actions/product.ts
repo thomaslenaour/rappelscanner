@@ -28,9 +28,8 @@ export async function getProductAction(
     };
   }
 
-  const gtin = Math.abs(parseInt(data.gtin));
   const params = qs.stringify({
-    where: `identification_des_produits like "%${gtin}%"`,
+    where: `identification_des_produits like "%${data.gtin}%"`,
     limit: 1,
     offset: 0,
     order_by: 'date_de_publication desc',
