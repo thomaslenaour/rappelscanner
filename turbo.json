@@ -11,7 +11,7 @@
     "NEXT_PUBLIC_SIMPLE_ANALYTICS_SCRIPT_URL",
     "NEXT_PUBLIC_SIMPLE_ANALYTICS_HOSTNAME"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
