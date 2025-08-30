@@ -1,6 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": [
+    "KV_URL",
+    "KV_REST_API_READ_ONLY_TOKEN",
     "RAPPEL_CONSO_API_URL",
     "KV_REST_API_URL",
     "KV_REST_API_TOKEN",
@@ -11,7 +13,7 @@
     "NEXT_PUBLIC_SIMPLE_ANALYTICS_SCRIPT_URL",
     "NEXT_PUBLIC_SIMPLE_ANALYTICS_HOSTNAME"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },

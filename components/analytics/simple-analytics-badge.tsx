@@ -14,6 +14,7 @@ export function SimpleAnalyticsBadge({ hostname }: SimpleAnalyticsBadgeProps) {
       href={`https://simpleanalytics.com/${hostname}?utm_source=${hostname}&utm_content=badge`}
       referrerPolicy="origin"
       target="_blank"
+      rel="noreferrer"
     >
       <picture>
         <source
