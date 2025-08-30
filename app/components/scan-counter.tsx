@@ -2,9 +2,10 @@ import { kv } from '@vercel/kv';
 
 import { cn } from '@/lib/utils';
 
-interface ScanCounterProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export async function ScanCounter({ className, ...props }: ScanCounterProps) {
+export async function ScanCounter({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   const scans = await kv.get<string | null>('scans');
 
   return (

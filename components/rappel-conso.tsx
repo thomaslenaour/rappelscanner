@@ -3,9 +3,10 @@ import { Info } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-interface RappelConsoProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function RappelConso({ className, ...props }: RappelConsoProps) {
+export function RappelConso({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(

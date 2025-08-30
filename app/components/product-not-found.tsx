@@ -3,9 +3,10 @@ import { CheckCircle } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-interface ProductNotFoundProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function ProductNotFound({ className, ...props }: ProductNotFoundProps) {
+export function ProductNotFound({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(

@@ -2,9 +2,10 @@ import { Barcode } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function Logo({ className, ...props }: LogoProps) {
+export function Logo({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn('flex items-center gap-x-2', className)} {...props}>
       <div className="rounded-full w-16 h-16 bg-primary relative flex items-center justify-center">
