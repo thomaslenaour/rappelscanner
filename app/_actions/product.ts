@@ -29,10 +29,10 @@ export async function getProductAction(
   }
 
   const params = qs.stringify({
-    where: `identification_des_produits like "%${data.gtin}%"`,
+    where: `identification_produits like '%${data.gtin}%'`,
     limit: 1,
     offset: 0,
-    order_by: 'date_de_publication desc',
+    order_by: 'date_publication desc',
     timezone: 'UTC',
   });
 
@@ -40,6 +40,10 @@ export async function getProductAction(
     `${process.env.RAPPEL_CONSO_API_URL}/records?${params}`,
   );
   if (!response.ok) {
+    console.error(response);
+    const json = await response.json();
+
+    console.error(json);
     return {
       success: false,
       error: 'An error occured while fetching the RappelConso API',
