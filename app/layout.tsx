@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Logo } from '@/components/logo';
 import { Toaster } from '@/components/ui/toaster';
@@ -64,6 +65,7 @@ export default function RootLayout({
             </noscript>
           </>
         )}
+        <SpeedInsights />
       </body>
     </html>
   );
