@@ -1,4 +1,4 @@
-import { kv } from '@vercel/kv';
+import { redis } from '@/lib/redis';
 
 import { cn } from '@/lib/utils';
 
@@ -6,7 +6,7 @@ export async function ScanCounter({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  const scans = await kv.get<string | null>('scans');
+  const scans = await redis.get<string | null>('scans');
 
   return (
     <div className={cn('', className)} {...props}>

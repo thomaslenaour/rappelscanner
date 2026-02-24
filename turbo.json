@@ -1,11 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": [
-    "KV_URL",
-    "KV_REST_API_READ_ONLY_TOKEN",
     "RAPPEL_CONSO_API_URL",
-    "KV_REST_API_URL",
-    "KV_REST_API_TOKEN",
+    "UPSTASH_REDIS_REST_URL",
+    "UPSTASH_REDIS_REST_TOKEN",
     "NEXT_PUBLIC_APP_URL",
     "NEXT_PUBLIC_VERCEL_URL",
     "NEXT_PUBLIC_VERCEL_ENV",

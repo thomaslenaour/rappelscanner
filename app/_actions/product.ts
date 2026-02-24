@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
-import { kv } from '@vercel/kv';
+import { redis } from '@/lib/redis';
 import * as qs from 'qs';
 
 import { ServerActionResponse } from '@/types/action';
@@ -53,7 +53,7 @@ export async function getProductAction(
   const json = (await response.json()) as RappelConsoApiResponse;
   const lastProduct = json?.records?.[0]?.record;
 
-  await kv.incr('scans');
+  await redis.incr('scans');
 
   revalidatePath('/');
 
