@@ -40,10 +40,6 @@ export async function getProductAction(
     `${process.env.RAPPEL_CONSO_API_URL}/records?${params}`,
   );
   if (!response.ok) {
-    console.error(response);
-    const json = await response.json();
-
-    console.error(json);
     return {
       success: false,
       error: 'An error occured while fetching the RappelConso API',
