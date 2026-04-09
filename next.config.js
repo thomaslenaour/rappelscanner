@@ -4,17 +4,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'sa.thomaslenaour.com',
+        hostname: 'queue.simpleanalyticscdn.com',
       },
     ],
   },
   async headers() {
     const cspHeader = `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://sa.thomaslenaour.com;
-      connect-src 'self' https://sa.thomaslenaour.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://scripts.simpleanalyticscdn.com;
+      connect-src 'self' https://queue.simpleanalyticscdn.com;
       style-src 'self' 'unsafe-inline';
-      img-src 'self' https://sa.thomaslenaour.com https://simpleanalyticsbadges.com;
+      img-src 'self' https://queue.simpleanalyticscdn.com https://simpleanalyticsbadges.com;
       font-src 'self' data:;
       object-src 'none';
       base-uri 'self';
@@ -51,4 +51,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

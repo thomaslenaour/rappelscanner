@@ -49,10 +49,7 @@ export default function RootLayout({
         <Toaster />
         {analyticsConfig.enabled && (
           <>
-            <SimpleAnalyticsScript
-              scriptSrc={analyticsConfig.scriptUrl}
-              hostname={analyticsConfig.hostname}
-            />
+            <SimpleAnalyticsScript hostname={analyticsConfig.hostname} />
             <noscript>
               <Image
                 src={`${analyticsConfig.baseUrl}/noscript.gif?hostname=${analyticsConfig.hostname}`}
