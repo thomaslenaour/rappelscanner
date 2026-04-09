@@ -4,23 +4,26 @@ import * as React from 'react';
 import Script from 'next/script';
 
 interface SimpleAnalyticsProps {
-  scriptSrc?: string;
   hostname?: string;
 }
 
-export function SimpleAnalyticsScript({
-  scriptSrc,
-  hostname,
-}: SimpleAnalyticsProps) {
+export function SimpleAnalyticsScript({ hostname }: SimpleAnalyticsProps) {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted || !scriptSrc || !hostname) {
+  if (!mounted || !hostname) {
     return null;
   }
 
-  return <Script async defer data-hostname={hostname} src={scriptSrc} />;
+  return (
+    <Script
+      async
+      defer
+      data-hostname={hostname}
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    />
+  );
 }
