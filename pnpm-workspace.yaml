@@ -1,3 +1,6 @@
+packages:
+  - '.'
+
 allowBuilds:
-  sharp: false
+  sharp: true
   unrs-resolver: false
