@@ -18,14 +18,14 @@
     "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^1.14.0",
+    "lucide-react": "^1.16.0",
     "next": "^16.2.6",
-    "qs": "^6.15.1",
+    "qs": "^6.15.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-zxing": "^2.1.0",
     "sharp": "^0.34.5",
-    "tailwind-merge": "^3.5.0",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^4.4.3"
   },
@@ -34,34 +34,34 @@
     "@commitlint/config-conventional": "^20.5.3",
     "@eslint/js": "^9.39.4",
     "@next/eslint-plugin-next": "^16.2.6",
-    "@tailwindcss/postcss": "^4.2.4",
-    "@types/node": "^25.6.2",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.9.1",
     "@types/qs": "^6.15.1",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.6",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-config-turbo": "^2.9.10",
+    "eslint-config-turbo": "^2.9.14",
     "eslint-plugin-only-warn": "^1.2.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-turbo": "^2.9.10",
+    "eslint-plugin-turbo": "^2.9.14",
     "globals": "^17.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "postcss": "^8.5.14",
-    "tailwindcss": "^4.2.4",
-    "turbo": "^2.9.10",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0",
+    "turbo": "^2.9.14",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.2"
+    "typescript-eslint": "^8.59.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@11.3.0+sha512.2c403d6594527287672b1f7056343a1f7c3634036a67ffabfcc2b3d7595d843768f8787148d1b57cf7956c90606bbd192857c363af19e96d2d0ec9ec5741d215",
   "engines": {
     "node": "24.x"
   }
