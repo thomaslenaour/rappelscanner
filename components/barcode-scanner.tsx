@@ -18,7 +18,7 @@ export function BarcodeScanner({
   const [error, setError] = React.useState('');
   const { ref } = useZxing({
     onDecodeResult(result) {
-      onDecodeResult(result.getText());
+      onDecodeResult(result.rawValue);
     },
     onError(err) {
       if (err instanceof DOMException) {
@@ -29,8 +29,6 @@ export function BarcodeScanner({
       setError('Unknown error');
     },
   });
-
-  console.log('ref', ref);
 
   return (
     <div
